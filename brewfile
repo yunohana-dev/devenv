@@ -1,0 +1,36 @@
+cask_args appdir: "/Applications"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+
+brew "awscli"
+brew "git"
+brew "htop"
+brew "jq"
+brew "yq"
+brew "mysql-client"
+brew "peco"
+
+brew "anyenv"
+#$ echo 'eval "$(anyenv init -)"' >> ~/.zshrc
+#$ anyenv init
+## restart shell
+#$ exec $SHELL -l
+#$ anyenv install --init
+#$ anyenv install nodenv
+#$ anyenv install pyenv
+brew "wget"
+brew "vim"
+brew "graphviz"
+
+brew "docker"
+cask "docker"
+
+cask "atok"
+cask "docker"
+cask "google-chrome"
+cask "iterm2"
+cask "jetbrains-toolbox"
+cask "slack"
+cask "vlc"
