@@ -1,36 +1,75 @@
+#####
+# README
+# 1. m1の場合homebrewのインストール先は /usr/local ではなく /opt 配下にする
+# 2. 伴って、 /opt 配下のbrewの使用を優先するため以下のコマンドを実行する
+#    echo 'export PATH="/opt/homebrew/bin:$PATH"' >> ~/.zshrc
+####
 cask_args appdir: "/Applications"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 
-brew "awscli"
-brew "git"
+brew "binutils"
+brew "coreutils"
+#$ echo 'export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"' >> .zshrc
+brew "diffutils"
+brew "findutils"
+brew "gzip"
 brew "htop"
+brew "wget"
 brew "jq"
 brew "yq"
-brew "mysql-client"
 brew "peco"
 
 brew "anyenv"
 #$ echo 'eval "$(anyenv init -)"' >> ~/.zshrc
 #$ anyenv init
-## restart shell
 #$ exec $SHELL -l
 #$ anyenv install --init
-#$ anyenv install nodenv
-#$ anyenv install pyenv
-brew "wget"
-brew "vim"
-brew "graphviz"
-
+#$ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> .zshrc
+#$ echo 'export PYENV_ROOT="$HOME/.anyenv/envs/pyenv"' >> .zshrc
+#$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> .zshrc
+#$ echo 'eval "$(pyenv init --path)"' >> .zshrc
+#$ echo 'export PATH="$HOME/.anyenv/envs/jenv/bin:$PATH"' >> .zshrc
+#$ echo 'eval "$(anyenv init -)"' >> .zshrc
+#$ exec $SHELL -l
+#$ jenv add `/usr/libexec/java_home -v "1.8"`
+brew "awscli"
+tap "aws/tap"
+brew "aws-sam-cli"
+cask "session-manager-plugin"
+tap "versent/homebrew-taps"
+brew "saml2aws"
 brew "docker"
-cask "docker"
+brew "git"
+brew "tig"
+brew "graphviz"
+brew "mysql-client"
+brew "libpq"
+brew "vim"
+tap "homebrew/cask-fonts"
+cask "font-hack-nerd-font"
+brew "k6"
+brew "sonar-scanner"
+
+tap "AdoptOpenJDK/openjdk"
+cask "adoptopenjdk/openjdk/adoptopenjdk8"
+cask "adoptopenjdk12"
+cask "adoptopenjdk16"
 
 cask "atok"
 cask "docker"
 cask "google-chrome"
+#cask "google-chrome-canary"
+cask "google-cloud-sdk"
+cask "slack"
 cask "iterm2"
 cask "jetbrains-toolbox"
-cask "slack"
+cask "visual-studio-code"
+#cask "mysqlworkbench"
+#cask "pgadmin4"
+#cask "zoom"
 cask "vlc"
+cask "gimp"
+#cask "box-tools"
