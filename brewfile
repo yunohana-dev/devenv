@@ -37,7 +37,12 @@ brew "anyenv"
 #$ echo 'export PATH="$HOME/.anyenv/envs/jenv/bin:$PATH"' >> .zshrc
 #$ echo 'eval "$(anyenv init -)"' >> .zshrc
 #$ exec $SHELL -l
+cask "temurin8"
+cask "temurin11"
+cask "temurin17"
+brew "maven"
 #$ jenv add `/usr/libexec/java_home -v "1.8"`
+
 brew "awscli"
 tap "aws/tap"
 brew "aws-sam-cli"
@@ -48,6 +53,7 @@ brew "docker"
 brew "git"
 brew "tig"
 brew "graphviz"
+brew "plantuml"
 brew "mysql-client"
 brew "libpq"
 brew "vim"
@@ -57,13 +63,10 @@ brew "k6"
 brew "sonar-scanner"
 brew "marp-cli"
 brew "imagemagick"
+brew "ffmpeg"
 brew "easy-rsa"
-
-tap "AdoptOpenJDK/openjdk"
-cask "adoptopenjdk/openjdk/adoptopenjdk8"
-cask "adoptopenjdk12"
-cask "adoptopenjdk16"
-brew "maven"
+cask "slack-cli"
+brew "deno"
 
 cask "atok"
 #cask "docker"
